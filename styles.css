@@ -1,0 +1,115 @@
+:root {
+    box-sizing: border-box;
+    --dark-cyan:  hsl(185, 75%, 39%);
+    --dark-saturated-blue: hsl(229, 23%, 23%);
+    --dark-gray-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+    --transparent-dark-gray: hsla(0, 0%, 50%, 0.3);
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 18px;
+    background:
+        url("images/bg-pattern-top.svg") calc(50% - 510px) calc(50% - 390px) no-repeat,
+        url('./images/bg-pattern-bottom.svg') calc(50% + 510px) calc(50% + 400px) no-repeat
+           var(--dark-cyan);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh; /* Use the whole screen */
+    justify-content: center; /* Center the card*/
+    line-height: 1.7;
+}
+
+
+.card {
+    width: 325px;
+    border-radius: 1em;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.card-header {
+    background: url('images/bg-pattern-card.svg');
+    width: 100%;
+    height: 140px;
+    border-radius: 1em 1em 0 0;
+}
+
+.profile-image {
+    position: relative;
+    background: white;
+}
+
+.profile-image > img {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto; /* Center the image */
+    border: 6px solid white;
+
+    /* Put the image between 2 divs*/
+    position: absolute;
+    transform: translate(-50%, -50%); /* */
+
+    /* Round the image */
+    border-radius: 50%;
+}
+
+.personal-info {
+    padding: 75px 0 20px 0;
+    background: white;
+    color: var(--dark-gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.personal-info .name {
+    font-weight: 700;
+    color: black;
+}
+
+.personal-info .address {
+    font-size: 0.9rem;
+}
+
+.social-statistics {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    background: white;
+    width: 100%;
+    border-top: 1px solid var(--transparent-dark-gray);
+    border-radius: 0 0 1em 1em;
+}
+
+.stat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.stat-number {
+    font-weight: 700;
+}
+
+.stat-subject {
+    color: var(--dark-gray);
+    font-size: 0.9rem;
+}
